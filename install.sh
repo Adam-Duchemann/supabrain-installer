@@ -2,7 +2,7 @@
 # Supabrain one-line installer for macOS and Linux.
 #
 # Usage:
-#   curl -fsSL https://raw.githubusercontent.com/Adam-Duchemann/supabrain-installer/v1.1.0/install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/Adam-Duchemann/supabrain-installer/v1.2.0/install.sh | bash
 #
 # Requires (a one-time per developer setup):
 #   1. A GitHub Personal Access Token (PAT) with `read:packages` scope.
@@ -77,8 +77,10 @@ fi
 
 # ----------------------------------------------------------------------------
 # 3. Run the wizard. Pin to a specific version so a broken latest doesn't
-# break existing users. v1.1.0 adds bundled docs (USAGE.md, /save-to-supabrain
-# slash command, memory-save skill) — see Adam-Duchemann/supabrain v1.1.0.
+# break existing users. v1.2.0 bundles docs (USAGE.md, /save-to-supabrain
+# slash command, memory-save skill) AND publishes @adam-duchemann/supabrain-ui
+# so teammates can launch the browser dashboard with `npx … supabrain-ui start`.
+# See Adam-Duchemann/supabrain v1.2.0.
 # ----------------------------------------------------------------------------
 echo "→ Launching Supabrain setup wizard..."
-exec npx --yes @adam-duchemann/supabrain-setup@1.1.0 "$@"
+exec npx --yes @adam-duchemann/supabrain-setup@1.2.0 "$@"
